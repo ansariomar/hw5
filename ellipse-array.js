@@ -8,11 +8,13 @@ function setup() {
   for (var index = 0; index < 50; index = index + 1) {
     circles[index] = {
 
-      x: random(0, 400),
-      y: random(0, 400),
-      d: random(0, 10),
-      c: color(random(0, 255), random(0, 255), random(0, 255))
-
+      x: random(0,400),
+      y: random(0,400),
+      x1: (0,0),
+      y1: (0,0),
+      d: random(0, 400),
+      c: color(random(0, 255), random(0, 255), random(0, 255)),
+      
     }
   }
 }
@@ -31,6 +33,8 @@ function draw() {
     // draw ellipse
     fill(circle.c);
     ellipse(circle.x, circle.y, circle.d);
+    ellipse(circle.x1, circle.y1, circle.d);
+    
 
 
 
@@ -55,6 +59,12 @@ function draw() {
       circle.c = 'blue'
     }
     
+    // 20% of the time white
+    if (random() < .2) {
+      // random diameter between 10 and 100
+      circle.d = random (50,100);
+      circle.c = color(random(0,255),random(0,255));
+    }
     // 20% of the time white
     if (random() < .2) {
       // random diameter between 10 and 100
