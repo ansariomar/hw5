@@ -23,6 +23,7 @@ function draw() {
 
 
   // draw drip
+  // I set the speed range to "random(1,10)" in order to make the difference between each drop's speed more obvious 
 
 
   for (var i = 0; i < 100; i = i + 20) {
