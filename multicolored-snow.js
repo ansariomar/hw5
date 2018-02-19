@@ -27,9 +27,9 @@ function draw() {
     circle.draw();
     circle.y = circle.y + circle.ySpeed;
     if (circle.y > height) {
-      circle.y = 220
+      circle.y = 100
     }
   }
-  fill(255)
-  rect(0, 200, 400, 20)
+  fill(225)
+  ellipse(200, 100, 400, 100)
 }
